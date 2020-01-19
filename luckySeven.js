@@ -1,12 +1,12 @@
 function RollDice() {
     return Math.floor(Math.random() * 6) + 1;
 }
-function Play() {
+function startGame() {
     let startingBet = Number(document.getElementById('startingBet').value);
     if(startingBet > 0) {
         let currentCash = startingBet;
         let currentRollCount = 0;
-        let highestAmountWon = 0;
+        let highestAmountWon = startingBet;
         let rollCountAtHighestAmount = 0;
         while(currentCash > 0){
             let Roll1 = this.RollDice();
@@ -17,8 +17,8 @@ function Play() {
                 currentCash -= 1;
             }
             currentRollCount++;
-            if(currentCash > (highestAmountWon + startingBet)){
-                highestAmountWon = currentCash - startingBet;
+            if(currentCash > highestAmountWon){
+                highestAmountWon = currentCash;
                 rollCountAtHighestAmount = currentRollCount;
             }
         }
@@ -31,9 +31,3 @@ function Play() {
         alert("Error. Please try again");
     }
 }
-
-
-// let form = document.getElementById('checkValidation');
-//     form.addEventListener('submit' , function(event) {
-//         event.preventDefault();
-//     } )

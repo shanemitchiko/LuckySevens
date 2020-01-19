@@ -13,31 +13,35 @@
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
     <style>
       table {
         border: 2px solid black;
       }
+
       tr:nth-child(2n + 1) {
         background-color: #f2f3f4;
       }
+
       tr:nth-child(2n) {
         background-color: #98ff98;
       }
+
       td {
         border: 1px solid #f2f3f4;
         padding: 0.2rem 1rem;
       }
 
-      /* Create a Flex class */ 
       .flexer {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-
+      h1 {
+      font-family: 'Abril Fatface', cursive
+      }
 
     </style>
 </head>
@@ -49,7 +53,7 @@
         <label>Starting Bet: $</label>
         <input type="number" id="startingBet" />
       </div>
-      <button type="submit" value="Play" onclick="Play(); return false;">Play</button>
+      <button type="submit" value="Play" onclick="startGame(); return false;">Play</button>
     </form>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
