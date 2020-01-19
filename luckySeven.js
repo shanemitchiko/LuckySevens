@@ -22,12 +22,18 @@ function Play() {
                 rollCountAtHighestAmount = currentRollCount;
             }
         }
-        document.getElementById("startingBetResult").innerText = startingBet;
+        document.getElementById("startingBetResult").innerText = "$" + startingBet;
         document.getElementById("currentRollResult").innerText = currentRollCount;
-        document.getElementById("highestAmountWonResult").innerText = highestAmountWon;
+        document.getElementById("highestAmountWonResult").innerText = "$" + highestAmountWon;
         document.getElementById("rollCountAtHighestAmountResult").innerText = rollCountAtHighestAmount;
         $('#exampleModal').modal("show")
     } else {
         alert("Error. Please try again");
     }
 }
+
+
+// let form = document.getElementById('checkValidation');
+//     form.addEventListener('submit' , function(event) {
+//         event.preventDefault();
+//     } )

@@ -30,19 +30,26 @@
         border: 1px solid #f2f3f4;
         padding: 0.2rem 1rem;
       }
+
+      /* Create a Flex class */ 
+      .flexer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
     </style>
 </head>
 
-<body class="d-flex flex-column align-items-center">
+<body class="flexer">
     <h1>Lucky Sevens</h1>
-    <form class="d-flex flex-column align-items-center">
+    <form class="flexer" id="checkValidation">
       <div>
-        <label>Starting Bet:</label>
+        <label>Starting Bet: $</label>
         <input type="number" id="startingBet" />
       </div>
-      <button type="submit" value="Play" onclick="Play(); return false;">
-        Play
-      </button>
+      <button type="submit" value="Play" onclick="Play(); return false;">Play</button>
     </form>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
